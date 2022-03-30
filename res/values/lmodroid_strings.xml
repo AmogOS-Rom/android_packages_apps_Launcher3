@@ -15,6 +15,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- All apps themed icons -->
+    <string name="pref_themed_icons_title">Use themed icons in drawer</string>
+    <string name="pref_themed_icons_summary">Follow themed icons used on home screen</string>
+
     <!-- Application name -->
     <string name="lmodroid_app_name" translatable="false">LMODroid Home</string>
 

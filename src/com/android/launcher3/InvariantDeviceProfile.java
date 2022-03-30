@@ -95,6 +95,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
 
     private static final float ICON_SIZE_DEFINED_IN_APP_DP = 48;
 
+    public static final String KEY_ALLAPPS_THEMED_ICONS = "pref_allapps_themed_icons";
     public static final String KEY_SHOW_DESKTOP_LABELS = "pref_desktop_show_labels";
     public static final String KEY_SHOW_DRAWER_LABELS = "pref_drawer_show_labels";
     public static final String KEY_WORKSPACE_LOCK = "pref_workspace_lock";
@@ -340,6 +341,7 @@ public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener 
             case KEY_MAX_LINES:
             case DeviceProfile.KEY_ROW_HEIGHT:
             case IconDatabase.KEY_ICON_PACK:
+            case KEY_ALLAPPS_THEMED_ICONS:
                 onConfigChanged(mContext);
                 break;
         }
