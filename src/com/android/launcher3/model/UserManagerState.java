@@ -36,7 +36,7 @@ public class UserManagerState {
      * Initialises the state values for all users
      */
     public void init(UserCache userCache, UserManager userManager) {
-        for (UserHandle user : userCache.getUserProfiles()) {
+        for (UserHandle user : userManager.getUserProfiles()) {
             long serialNo = userCache.getSerialNumberForUser(user);
             boolean isUserQuiet = userManager.isQuietModeEnabled(user);
             allUsers.put(serialNo, user);
@@ -75,7 +75,8 @@ public class UserManagerState {
      * Returns true if all user profiles have quiet mode enabled.
      */
     public boolean isAllProfilesQuietModeEnabled() {
-        for (int i = mQuietUsersHashCodeMap.size() - 1; i >= 0; i--) {
+        // skip entry 0 as that is not a work profile
+        for (int i = mQuietUsersHashCodeMap.size() - 1; i > 0; i--) {
             if (!mQuietUsersHashCodeMap.valueAt(i)) {
                 return false;
             }
